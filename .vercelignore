@@ -1,0 +1,13 @@
+# Ignore backend
+server/
+
+# Ignore dependencies (Vercel installs fresh ones anyway)
+node_modules/
+
+# Ignore git files
+.git/
+.gitignore
+
+# Ignore local configs
+.env
+.env.local
