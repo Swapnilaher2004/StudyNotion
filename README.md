@@ -1,161 +1,182 @@
-SkillYatra - An EdTech Website 🚀
+# 🎓 StudyNotion — MERN EdTech Platform
 
-SkillYatra is a feature-rich, modern EdTech platform that allows users to create, consume, and rate educational content. Built using the MERN stack, it provides a seamless and interactive learning experience, empowering instructors to showcase expertise and learners to access high-quality content globally.
+🚀 **Live Project:** https://studynotion-2-pmgl.onrender.com
 
-🌐 Live Demo: SkillYatra Website
-
----
-
-Table of Contents 📖
-
-Introduction
-
-Key Features
-
-System Architecture
-
-Tech Stack
-
-Installation & Setup
-
-Screenshots
-
-Future Enhancements
-
-Contributing
-
-License
+StudyNotion is a full-stack EdTech web application built using the **MERN Stack**.
+It allows students to explore courses, instructors to create learning content, and admins to manage the platform — all in a modern, responsive UI.
 
 ---
 
-Introduction
+## 🌐 Live Links
 
-SkillYatra is a fully functional EdTech platform tailored for modern online education. It combines a modular frontend with robust backend integrations, enabling scalable and engaging learning applications. The project is designed to empower developers to create feature-rich educational platforms with ease.
-
-Key Features ✨
-
-Customizable UI Components: Reusable React components like Navbar, Footer, and Course Cards.
-
-Secure Authentication & Profile Management: Role-based access, OTP verification, and password management.
-
-Payment & Enrollment Workflows: Smooth course purchase, enrollment, and progress tracking.
-
-API-Driven Backend: Well-structured routes and models for courses, categories, reviews, and user data.
-
-State Management & Hooks: Efficient global state handling with Redux slices and custom hooks.
-
-Cloud-based Media Management: Integration with Cloudinary for storing and serving media content.
-
-Markdown Support: Course content is stored in Markdown for easy formatting and display.
-
-Scalable Architecture: Clear separation of concerns with extensibility for future features.
+* 🔗 **Frontend:** https://studynotion-2-pmgl.onrender.com
+* ⚙️ **Backend API:** https://studynotion-x3r1.onrender.com
 
 ---
 
-System Architecture 🏗️
+## ✨ Features
 
-The platform follows a client-server architecture with three main components:
+### 👨‍🎓 Student
 
-Front-end
+* User authentication (Signup/Login)
+* Browse course catalog
+* Purchase and enroll in courses
+* Track learning progress
+* Update profile
 
-ReactJS based frontend provides a responsive UI with pages for:
+### 🧑‍🏫 Instructor
 
-Students: Homepage, Course List, Wishlist, Cart & Checkout, Course Content, User Profile & Edit.
+* Create and manage courses
+* Upload videos & content
+* View analytics and enrolled students
 
-Instructors: Dashboard, Course Management, Insights, Profile Management.
+### 👑 Admin
 
-Admin (Future Scope): Dashboard, Instructor Management, Analytics, and other management tools.
-
-Back-end
-
-NodeJS & Express backend handles:
-
-User authentication & authorization with JWT and OTP verification.
-
-Course management: CRUD operations for courses.
-
-Payment integration via Razorpay for enrollment.
-
-Cloud-based media management with Cloudinary.
-
-Storing course content in Markdown for flexible rendering.
-
-Database
-
-MongoDB is used as a NoSQL database to store user data, courses, reviews, and payment records.
+* Platform management
+* User and course moderation
 
 ---
 
-Tech Stack 🛠️
+## 🛠️ Tech Stack
 
-Frontend: ReactJS, Redux, Tailwind CSS
+### 🔵 Frontend
 
-Backend: NodeJS, ExpressJS
+* React.js
+* Redux Toolkit
+* Tailwind CSS
+* Axios
 
-Database: MongoDB
+### 🟢 Backend
 
-Authentication: JWT, OTP Verification
+* Node.js
+* Express.js
+* MongoDB & Mongoose
+* JWT Authentication
+* Cloudinary (Media Uploads)
+* Razorpay (Payments)
 
-Payment Gateway: Razorpay
+### ☁️ Deployment
 
-Media Storage: Cloudinary
-
-Deployment: Vercel
+* Frontend: Render Static Site
+* Backend: Render Web Service
+* Database: MongoDB Atlas
 
 ---
 
-Installation & Setup ⚡
+## 📁 Project Structure
 
-Clone the repository:
+```
+StudyNotion/
+ ├── Server/        # Express backend
+ ├── src/           # React frontend
+ ├── public/
+ ├── package.json
+```
 
-git clone https://github.com/yourusername/skillyatra.git
-cd skillyatra
+---
 
+## ⚙️ Environment Variables
 
-Backend Setup:
+### 🔐 Backend (`Server/.env`)
 
-cd backend
+```
+PORT=4000
+MONGODB_URL=your_mongodb_uri
+JWT_SECRET=your_secret
+
+CLOUD_NAME=your_cloudinary_name
+CLOUD_API_KEY=your_key
+CLOUD_API_SECRET=your_secret
+
+RAZORPAY_KEY=your_key
+RAZORPAY_SECRET=your_secret
+```
+
+### 🌍 Frontend (`.env.production`)
+
+```
+REACT_APP_BASE_URL=https://studynotion-x3r1.onrender.com/api/v1
+```
+
+---
+
+## 💻 Run Locally
+
+### 1️⃣ Clone Repo
+
+```
+git clone https://github.com/Swapnilaher2004/StudyNotion.git
+cd StudyNotion
+```
+
+### 2️⃣ Install Dependencies
+
+Frontend:
+
+```
 npm install
-cp .env.example .env  # configure environment variables
+```
+
+Backend:
+
+```
+cd Server
+npm install
+```
+
+### 3️⃣ Start Project
+
+Backend:
+
+```
 npm run dev
+```
 
+Frontend:
 
-Frontend Setup:
-
-cd frontend
-npm install
+```
 npm start
-
-
-Access the app:
-Open http://localhost:3000
- in your browser.
+```
 
 ---
 
+## 🚀 Deployment Notes
 
-Future Enhancements 🚀
+* Backend deployed on Render Web Service.
+* Frontend deployed as Render Static Site.
+* CORS configured to allow both:
 
-Real-time chat between students and instructors
-
-AI-powered course recommendations
-
-Multi-language support
-
-Admin panel for enhanced analytics and management
+  * `http://localhost:3000`
+  * `https://studynotion-2-pmgl.onrender.com`
 
 ---
 
-Contributing 🤝
+## 🧠 Learning Goals
 
-We welcome contributions!
+This project demonstrates:
 
-Fork the repository
+* Full MERN architecture
+* Authentication & authorization
+* REST API design
+* Payment integration
+* Cloud media handling
+* Production deployment workflow
 
-Create a branch (git checkout -b feature/YourFeature)
+---
 
-Commit your changes (git commit -m 'Add some feature')
+## 📸 Screenshots
 
-Push to the branch (git push origin feature/YourFeature)
+(Add your screenshots here for UI preview.)
 
-Open a Pull Request
+---
+
+## 👨‍💻 Author
+
+**Swapnil Aher**
+GitHub: https://github.com/Swapnilaher2004
+
+---
+
+## ⭐ Support
+
+If you like this project, consider giving it a ⭐ on GitHub!
